@@ -9,6 +9,7 @@ namespace ToDoNoteAPI.Data
         {
         }
 
-        public DbSet<Note> Notes { get; set; }
+        public DbSet<Note> NoteDetails { get; set; }
+        public DbSet<User> UsersList { get; set; }
     }
 }

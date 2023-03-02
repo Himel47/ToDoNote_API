@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using ToDoNoteAPI.Interfaces;
 using ToDoNoteAPI.Models;
+using ToDoNoteAPI.Models.Dto;
 
 namespace ToDoNoteAPI.Controllers
 {
@@ -44,7 +45,7 @@ namespace ToDoNoteAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddNote(Note note)
+        public IActionResult AddNote([FromForm] NoteAttachment note)
         {
             if(note == null)
             {
@@ -59,7 +60,7 @@ namespace ToDoNoteAPI.Controllers
             return Ok("Successfully Created New Note.");
         }
 
-        [HttpPut]
+        /*[HttpPut]
         public IActionResult UpdateNote(Note note)
         {
             var updateNote = noteRepository.UpdateNote(note);
@@ -69,7 +70,7 @@ namespace ToDoNoteAPI.Controllers
                 return StatusCode(500, ModelState);
             }
             return Ok("Successfully Updated Note.");
-        }
+        }*/
 
         [HttpDelete("id")]
         public IActionResult DeleteNote(int Id)

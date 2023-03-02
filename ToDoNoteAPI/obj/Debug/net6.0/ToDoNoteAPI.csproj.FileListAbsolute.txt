@@ -174,3 +174,4 @@ C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ToDoNoteAPI.g
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ref\ToDoNoteAPI.dll
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\ToDoNoteAPI.staticwebassets.runtime.json

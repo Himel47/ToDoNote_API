@@ -1,11 +1,54 @@
 {
   "Version": 1,
-  "Hash": "ceHm+E1EyYSTA3Pis3PoWecRWe2zXK+Qfq8ABLj6W9A=",
+  "Hash": "r31/y7NSky+sEcBAOnMBfXDudWGKbC5yWwUyRC73fR4=",
   "Source": "ToDoNoteAPI",
   "BasePath": "_content/ToDoNoteAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ToDoNoteAPI\\wwwroot",
+      "Source": "ToDoNoteAPI",
+      "ContentRoot": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteAPI\\wwwroot\\",
+      "BasePath": "_content/ToDoNoteAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteAPI\\wwwroot\\Images\\first",
+      "SourceId": "ToDoNoteAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteAPI\\wwwroot\\",
+      "BasePath": "_content/ToDoNoteAPI",
+      "RelativePath": "Images/first",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\first"
+    },
+    {
+      "Identity": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteAPI\\wwwroot\\Images\\Second",
+      "SourceId": "ToDoNoteAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteAPI\\wwwroot\\",
+      "BasePath": "_content/ToDoNoteAPI",
+      "RelativePath": "Images/Second",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Second"
+    }
+  ]
 }

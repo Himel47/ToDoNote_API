@@ -12,8 +12,8 @@ using ToDoNoteAPI.Data;
 namespace ToDoNoteAPI.Migrations
 {
     [DbContext(typeof(dbConnection))]
-    [Migration("20230227113443_noteDesc")]
-    partial class noteDesc
+    [Migration("20230302071947_try")]
+    partial class @try
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,18 +33,19 @@ namespace ToDoNoteAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdatesDate")
+                    b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("attachedPhoto")
-                        .IsRequired()
+                    b.Property<string>("imagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isActive")
@@ -56,7 +57,34 @@ namespace ToDoNoteAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Notes");
+                    b.ToTable("NoteDetails");
+                });
+
+            modelBuilder.Entity("ToDoNoteAPI.Models.User", b =>
+                {
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfilePicture")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Name");
+
+                    b.ToTable("UsersList");
                 });
 #pragma warning restore 612, 618
         }

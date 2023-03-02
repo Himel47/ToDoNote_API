@@ -1,46 +1,60 @@
 ﻿using ToDoNoteAPI.Data;
 using ToDoNoteAPI.Interfaces;
 using ToDoNoteAPI.Models;
+using ToDoNoteAPI.Models.Dto;
 
 namespace ToDoNoteAPI.Repository
 {
     public class NoteRepository : INoteRepository
     {
         private readonly dbConnection connection;
+        private readonly IWebHostEnvironment environment;
 
-        public NoteRepository(dbConnection connection)
+        public NoteRepository(dbConnection connection, IWebHostEnvironment environment)
         {
             this.connection = connection;
+            this.environment = environment;
         }
 
-        public bool AddNewNote(Note note)
+        public bool AddNewNote(NoteAttachment note)
         {
-            note.CreatedDate = DateTime.Now;
-            note.UpdatesDate = DateTime.Now;
-
-            connection.Notes.Add(note);
+            var newNote = new Note()
+            {
+                Title = note.Title,
+                noteDescrition = note.noteDescrition,
+                isActive = note.isActive,
+                CreatedBy = note.CreatedBy,
+                imagePath = Path.Combine(@"C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\wwwroot\Images", $"{note.Title}.jpg"),
+                CreatedDate = note.CreatedDate,
+                UpdatedDate = note.UpdatedDate,
+            };
+            using(Stream stream =new FileStream(newNote.imagePath, FileMode.Create))
+            {
+                note.attachedPhoto.CopyTo(stream);
+            }
+            connection.NoteDetails.Add(newNote);
             return Save();
         }
 
-        public bool UpdateNote(Note note)
+        /*public bool UpdateNote(Note note)
         {
-            connection.Notes.Update(note);
+            connection.NoteDetails.Update(note);
             return Save();
-        }
+        }*/
 
         public ICollection<Note> GetAllNotes()
         {
-            return connection.Notes.OrderBy(x => x.Id).ToList();
+            return connection.NoteDetails.OrderBy(x => x.Id).ToList();
         }
 
         public Note GetParticularById(int id)
         {
-            return connection.Notes.Where(x => x.Id == id).SingleOrDefault();
+            return connection.NoteDetails.Where(x => x.Id == id).SingleOrDefault();
         }
 
         public bool ifIdExist(int id)
         {
-            return connection.Notes.Any(x => x.Id == id);
+            return connection.NoteDetails.Any(x => x.Id == id);
         }
 
         public bool Save()
@@ -51,7 +65,7 @@ namespace ToDoNoteAPI.Repository
 
         public bool DeleteNote(int id)
         {
-            var deletedNote = connection.Notes.Where(x=>x.Id == id).FirstOrDefault();
+            var deletedNote = connection.NoteDetails.Where(x=>x.Id == id).FirstOrDefault();
             deletedNote.isActive=false;
             return Save();
         }
