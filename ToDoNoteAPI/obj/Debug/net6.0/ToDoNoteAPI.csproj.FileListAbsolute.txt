@@ -156,7 +156,6 @@ C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ToDoNoteAPI.G
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ToDoNoteAPI.AssemblyInfoInputs.cache
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ToDoNoteAPI.AssemblyInfo.cs
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ToDoNoteAPI.csproj.CoreCompileInputs.cache
-C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ToDoNoteAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ToDoNoteAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\staticwebassets\msbuild.ToDoNoteAPI.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.ToDoNoteAPI.props
@@ -175,3 +174,8 @@ C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ref\ToDoNoteA
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\ToDoNoteAPI.staticwebassets.runtime.json
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\ToDoNoteData.dll
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\ToDoNoteService.dll
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\ToDoNoteService.pdb
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\ToDoNoteData.pdb
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ToDoNoteAPI.MvcApplicationPartsAssemblyInfo.cs

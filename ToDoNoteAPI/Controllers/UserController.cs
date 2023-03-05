@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ToDoNoteAPI.Data;
+using ToDoNoteData.Data;
 
 namespace ToDoNoteAPI.Controllers
 {

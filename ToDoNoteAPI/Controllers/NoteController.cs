@@ -1,28 +1,27 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using ToDoNoteAPI.Interfaces;
-using ToDoNoteAPI.Models;
-using ToDoNoteAPI.Models.Dto;
+using ToDoNoteData.Dto;
+using ToDoNoteService.Interface;
 
 namespace ToDoNoteAPI.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class NoteController : ControllerBase
     {
-        private readonly INoteRepository noteRepository;
+        private readonly INoteService noteService;
 
-        public NoteController(INoteRepository noteRepository)
+        public NoteController(INoteService noteService)
         {
-            this.noteRepository = noteRepository;
+            this.noteService = noteService;
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAllNotes()
         {
-            var notes = noteRepository.GetAllNotes().ToList();
-            if(!ModelState.IsValid)
+            var notes = noteService.GetAllNoteAsync().ToList();
+            if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
@@ -30,13 +29,13 @@ namespace ToDoNoteAPI.Controllers
         }
 
         [HttpGet("Id")]
-        public IActionResult GetNotebyId(int Id)
+        public async Task<IActionResult> GetNotebyId(int Id)
         {
-            if(!noteRepository.ifIdExist(Id))
+            if (!noteService.ifIdExist(Id))
             {
                 return NotFound();
             }
-            var noteById = noteRepository.GetParticularById(Id);
+            var noteById = await noteService.GetNoteByIdAsync(Id);
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -45,41 +44,27 @@ namespace ToDoNoteAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddNote([FromForm] NoteAttachment note)
+        public async Task<IActionResult> AddNote([FromForm] AddNote note)
         {
-            if(note == null)
-            {
-                return BadRequest(ModelState);
-            }
-            var newNote = noteRepository.AddNewNote(note);
-            if (!newNote)
-            {
-                ModelState.AddModelError("","Something went Wrong!");
-                return StatusCode(500,ModelState);
-            }
-            return Ok("Successfully Created New Note.");
+            var response = await noteService.AddNoteAsync(note);
+            return StatusCode(StatusCodes.Status201Created, response);
         }
 
-        /*[HttpPut]
-        public IActionResult UpdateNote(Note note)
+        [HttpPut]
+        public async Task<IActionResult> UpdateNote([FromForm] AddNote note)
         {
-            var updateNote = noteRepository.UpdateNote(note);
-            if (!updateNote)
-            {
-                ModelState.AddModelError("", "Something went Wrong!");
-                return StatusCode(500, ModelState);
-            }
-            return Ok("Successfully Updated Note.");
-        }*/
+            var updateNote =await noteService.UpdateNoteAsync(note);
+            return StatusCode(StatusCodes.Status200OK,updateNote);
+        }
 
         [HttpDelete("id")]
-        public IActionResult DeleteNote(int Id)
+        public async Task<IActionResult> DeleteNoteAsync(int Id)
         {
-            if (!noteRepository.ifIdExist(Id))
+            if (!noteService.ifIdExist(Id))
             {
                 return NotFound();
             }
-            var noteById = noteRepository.DeleteNote(Id);
+            var noteById = noteService.DeleteNoteAsync(Id);
             return Ok("Note Moved to Trash!");
         }
     }

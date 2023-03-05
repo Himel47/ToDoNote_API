@@ -1,0 +1,14 @@
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\ToDoNoteData.csproj.AssemblyReference.cache
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\ToDoNoteData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\ToDoNoteData.AssemblyInfoInputs.cache
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\ToDoNoteData.AssemblyInfo.cs
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\ToDoNoteData.csproj.CoreCompileInputs.cache
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\bin\Debug\net6.0\ToDoNoteData.deps.json
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\bin\Debug\net6.0\ToDoNoteData.runtimeconfig.json
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\bin\Debug\net6.0\ToDoNoteData.dll
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\bin\Debug\net6.0\ToDoNoteData.pdb
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\ToDoNoteData.dll
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\refint\ToDoNoteData.dll
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\ToDoNoteData.pdb
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\ToDoNoteData.genruntimeconfig.cache
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\obj\Debug\net6.0\ref\ToDoNoteData.dll

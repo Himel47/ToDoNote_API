@@ -1,8 +1,16 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteAPI\\wwwroot\\Images\\Fourth.jpg",
+      "PackagePath": "staticwebassets\\Images\\Fourth.jpg"
+    },
+    {
       "Id": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteAPI\\wwwroot\\Images\\Second",
       "PackagePath": "staticwebassets\\Images"
+    },
+    {
+      "Id": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteAPI\\wwwroot\\Images\\Third.jpg",
+      "PackagePath": "staticwebassets\\Images\\Third.jpg"
     },
     {
       "Id": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteAPI\\wwwroot\\Images\\first",
