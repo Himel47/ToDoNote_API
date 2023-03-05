@@ -14,7 +14,7 @@ namespace ToDoNoteData.Entities
         [Required(ErrorMessage = "Enter Valid Mail Address!")]
         public string? Email { get; set; }
         public bool IsActive { get; set; }
-        [Required(ErrorMessage = "Upload an Image!")]
+        //[Required(ErrorMessage = "Upload an Image!")]
         public string? ProfilePicture { get; set; }
     }
 }

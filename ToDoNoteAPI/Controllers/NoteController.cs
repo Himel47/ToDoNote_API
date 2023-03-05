@@ -58,7 +58,7 @@ namespace ToDoNoteAPI.Controllers
         }
 
         [HttpDelete("id")]
-        public async Task<IActionResult> DeleteNoteAsync(int Id)
+        public async Task<IActionResult> DeleteNote(int Id)
         {
             if (!noteService.ifIdExist(Id))
             {
