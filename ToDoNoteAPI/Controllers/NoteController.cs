@@ -31,7 +31,7 @@ namespace ToDoNoteAPI.Controllers
         [HttpGet("Id")]
         public async Task<IActionResult> GetNotebyId(int Id)
         {
-            if (!noteService.ifIdExist(Id))
+            if (!noteService.IfIdExist(Id))
             {
                 return NotFound();
             }
@@ -60,11 +60,11 @@ namespace ToDoNoteAPI.Controllers
         [HttpDelete("id")]
         public async Task<IActionResult> DeleteNote(int Id)
         {
-            if (!noteService.ifIdExist(Id))
+            if (!noteService.IfIdExist(Id))
             {
                 return NotFound();
             }
-            var noteById = noteService.DeleteNoteAsync(Id);
+            await noteService.DeleteNoteAsync(Id);
             return Ok("Note Moved to Trash!");
         }
     }

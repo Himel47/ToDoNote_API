@@ -179,3 +179,4 @@ C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\ToDoNoteServi
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\ToDoNoteService.pdb
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\ToDoNoteData.pdb
 C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\obj\Debug\net6.0\ToDoNoteAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -30,7 +30,7 @@ namespace ToDoNoteAPI.Controllers
         [HttpGet("id")]
         public async Task<IActionResult> GetUserById(int id)
         {
-            if (userService.ifIdExist(id))
+            if (userService.IfIdExist(id))
             {
                 return NotFound();
             }
@@ -63,7 +63,7 @@ namespace ToDoNoteAPI.Controllers
         [HttpDelete("id")]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            if(!userService.ifIdExist(id))
+            if(!userService.IfIdExist(id))
             {
                 return NotFound();
             }

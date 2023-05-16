@@ -16,5 +16,7 @@ namespace ToDoNoteData.Entities
         public bool IsActive { get; set; }
         //[Required(ErrorMessage = "Upload an Image!")]
         public string? ProfilePicture { get; set; }
+        public byte[] PasswordHash { get; set; }
+        public byte[] PasswordSalt { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace ToDoNoteData.Dto
 
         [Required(ErrorMessage = "Write Something on the note body!")]
         public string? Descrition { get; set; }
-        public IFormFile? attachedPhoto { get; set; }
+        public IFormFile? AttachedPhoto { get; set; }
 
     }
 }

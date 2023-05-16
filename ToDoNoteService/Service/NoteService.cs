@@ -24,12 +24,13 @@ namespace ToDoNoteService.Service
                     Descrition = addNote.Descrition,
                     IsActive = true,
                     CreatedDate = DateTime.Now,
-                //    ImagePath = Path.Combine(@"C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\Photos\NoteAttachment\", $"{addNote.Title}.jpg")
                 };
-                /*using (Stream stream = new FileStream(note.ImagePath, FileMode.Create))
+                if (addNote.AttachedPhoto != null)
                 {
-                    addNote.attachedPhoto.CopyTo(stream);
-                }*/
+                    note.ImagePath = Path.Combine(@"C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\Photos\NoteAttachment\", $"{addNote.Title}.jpg");
+                    using Stream stream = new FileStream(note.ImagePath, FileMode.Create);
+                    await addNote.AttachedPhoto.CopyToAsync(stream);
+                }
                 connection.Notes.Add(note);
                 var SaveNote = Save();
                 if (SaveNote)
@@ -74,6 +75,12 @@ namespace ToDoNoteService.Service
                 NoteById.Descrition = note.Descrition;
                 NoteById.UpdatedBy = note.Id;
                 NoteById.UpdatedDate = DateTime.Now;
+                if (note.AttachedPhoto != null)
+                {
+                    NoteById.ImagePath = Path.Combine(@"C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\Photos\NoteAttachment\", $"{note.Title}.jpg");
+                    using Stream stream = new FileStream(NoteById.ImagePath, FileMode.Create);
+                    await note.AttachedPhoto.CopyToAsync(stream);
+                }
                 connection.Notes.Update(NoteById);
                 var SaveUpdate = Save();
                 if (SaveUpdate)
@@ -83,15 +90,10 @@ namespace ToDoNoteService.Service
             }
             return null;
         }
-        public bool ifIdExist(int id)
+        public bool IfIdExist(int id)
         {
             return connection.Notes.Any(x => x.Id == id);
         }
-        public bool Save()
-        {
-            var saved = connection.SaveChanges();
-            return saved > 0 ? true : false;
-        }
-
+        public bool Save() => connection.SaveChanges() > 0 ? true : false;
     }
 }

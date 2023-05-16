@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "gq8A5eQDHMtzj5qyJw3WKwebWdDEBJyKFpeNmipasYqUpfZus9r9tqNUp1kDytUtuf5Qx6bJV0VZm+mICf6j0g==",
+  "dgSpecHash": "6CGu5Muk6Gf4BTLVMaSA6T4V3I4DMQlR73lyeWNF7aG2+XMURXIG+TJvAWWAPJSujHDu1mNev6W6g+PKz3xV2Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\BS358\\Documents\\ToDoNote_API\\ToDoNoteService\\ToDoNoteService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BS358\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\BS358\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\BS358\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\BS358\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\BS358\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\BS358\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\BS358\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

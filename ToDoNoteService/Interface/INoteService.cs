@@ -15,7 +15,7 @@ namespace ToDoNoteService.Interface
         ICollection<Note> GetAllNoteAsync();
         Task<Note> GetNoteByIdAsync(int id);
         Task<Note> DeleteNoteAsync(int id);
-        bool ifIdExist(int id);
+        bool IfIdExist(int id);
         bool Save();
     }
 }

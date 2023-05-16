@@ -11,7 +11,7 @@ namespace ToDoNoteService.Interface
         ICollection<User> GetAllUsersAsync();
         Task<User> GetUserByIdAsync(int id);
         Task<User> DeleteUserAsync(int id);
-        bool ifIdExist(int id);
+        bool IfIdExist(int id);
         bool Save();
     }
 }

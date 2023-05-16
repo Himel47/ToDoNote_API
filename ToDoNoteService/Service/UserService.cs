@@ -24,9 +24,14 @@ namespace ToDoNoteService.Service
                     Name = user.Name,
                     Email = user.Email,
                     IsActive = true,
-                    CreatedDate = DateTime.Now,
-                //    ProfilePicture = 
+                    CreatedDate = DateTime.Now
                 };
+                if(user.ProfilePhoto!= null)
+                {
+                    RegisteredUser.ProfilePicture = Path.Combine(@"C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\Photos\UserProfile\", $"{user.Name}.jpg");
+                    using Stream stream = new FileStream(RegisteredUser.ProfilePicture, FileMode.Create);
+                    await user.ProfilePhoto.CopyToAsync(stream);
+                }
                 connection.Users.Add(RegisteredUser);
                 var SaveNote = Save();
                 if (SaveNote)
@@ -67,10 +72,16 @@ namespace ToDoNoteService.Service
             var UserById = connection.Users.Where(x => x.Id == user.Id).SingleOrDefault();
             if (UserById != null)
             {
-                UserById.Name = user.Name;
                 UserById.Email = user.Email;
                 UserById.UpdatedBy = user.Id;
                 UserById.UpdatedDate = DateTime.Now;
+                if (user.ProfilePhoto != null)
+                {
+                    UserById.ProfilePicture = Path.Combine(@"C:\Users\BS358\Documents\ToDoNote_API\ToDoNoteData\Photos\UserProfile\", $"{user.Name}.jpg");
+                    using Stream stream = new FileStream(UserById.ProfilePicture, FileMode.Create);
+                    await user.ProfilePhoto.CopyToAsync(stream);
+                }
+                UserById.Name = user.Name;
                 connection.Users.Update(UserById);
                 var SaveUpdate = Save();
                 if (SaveUpdate)
@@ -78,17 +89,12 @@ namespace ToDoNoteService.Service
                     return user;
                 }
             }
-            return null;
+            return user;
         }
-        public bool ifIdExist(int id)
+        public bool IfIdExist(int id)
         {
             return connection.Notes.Any(x => x.Id == id);
         }
-
-        public bool Save()
-        {
-            var saved = connection.SaveChanges();
-            return saved > 0 ? true : false;
-        }
-    }
+        public bool Save() => connection.SaveChanges() > 0 ? true : false;
+    } 
 }
